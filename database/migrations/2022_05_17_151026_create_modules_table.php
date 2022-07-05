@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('modules', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->foreignUuid('course_id')->constrained('courses');
+            $table->uuid('course_id')->nullable(false);
             $table->string('name');
             $table->timestamps();
         });

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('lessons', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->foreignUuid('module_id')->constrained('modules');
+            $table->uuid('module_id')->nullable(false);
             $table->string('name')->unique();
             $table->string('url')->unique();
             $table->string('video')->unique();

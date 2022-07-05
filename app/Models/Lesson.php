@@ -12,4 +12,9 @@ class Lesson extends BaseModel
         "video",
         "decription"
     ];
+
+    public function supports()
+    {
+        return $this->hasMany(Support::class);
+    }
 }

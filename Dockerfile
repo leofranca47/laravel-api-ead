@@ -1,7 +1,7 @@
 FROM php:8.0.2-fpm
 
 # Arguments
-ARG user=carlos
+ARG user=docker
 ARG uid=1000
 
 # Install system dependencies
